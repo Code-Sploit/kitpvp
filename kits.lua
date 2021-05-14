@@ -6,6 +6,7 @@ kitpvp.api.register_kit({
   items = {itemstr1, itemstr2, itemstr3},
   armor = leather/chain/iron/gold/diamond/netherite
 })
+
 ]]
 
 kitpvp.api.register_kit({

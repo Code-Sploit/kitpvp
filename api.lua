@@ -43,16 +43,20 @@ function kitpvp.api.get_item_obj(itemstring, enchantments)
 end
 
 function kitpvp.api.register_kit(def)
-  local name   = def.name
-  local items  = def.items
-  local armor  = def.armor
+  local _def = {}
+
+  _def.name               = def.name
+  _def.items              = def.items
+  _def.armor              = def.armor
+  _def.armor_enchantments = def.armor_enchantments
+  _def.default_items      = def.default_items
   --local effects = def.effects
 
   -- Is $def completly filled in?
-  if not name or not items or not armor then return end
+  if not _def.name or not _def.items or not _def.armor or not _def.armor_enchantments or not _def.default_items then return end
 
   -- Register the kit
-  kitpvp.kits[name] = def
+  kitpvp.kits[_def.name] = _def
 end
 
 function kitpvp.api.get_kit_names()
@@ -90,8 +94,28 @@ function kitpvp.api.give_kit(player, kitname)
 
   for i, component in pairs(components) do
     local item_name = "mcl_armor:" .. component .. "_" .. def.armor
+    local itemstack = ItemStack(item_name)
+    local final_item
 
-    kitpvp.api.give_to_player(player, item_name)
+    if def.armor_enchantments then
+      local index = 0
+
+      if component == "helmet" then
+        index = 0
+      elseif component == "chestplate" then
+        index = 1
+      elseif component == "leggings" then
+        index = 2
+      elseif component == "boots" then
+        index = 3
+      end
+
+      local enchantments = def.armor_enchantments[index]
+
+      final_item = kitpvp.api.add_enchantments(itemstack, enchantments)
+    end
+
+    kitpvp.api.give_to_player(player, final_item)
   end
 
   -- ITEMS

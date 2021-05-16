@@ -14,7 +14,7 @@ kitpvp.api.register_kit({
 ]]
 
 -- To make the item converter function a bit shorter
-item = kitpvp.api.get_tool_obj
+item = kitpvp.api.get_item_obj
 
 kitpvp.api.register_kit({
   name = "tank",
@@ -22,7 +22,8 @@ kitpvp.api.register_kit({
     item("mcl_tools:sword_iron", {sharpness = 1})
   },
   default_items = true,
-  armor = "iron"
+  armor = "iron",
+  armor_enchantments = {{protection = 1}, {protection = 1}, {protection = 1}, {protection = 1}}
 })
 
 kitpvp.api.register_kit({
@@ -33,7 +34,8 @@ kitpvp.api.register_kit({
     item("mcl_bows:arrow 1")
   },
   default_items = true,
-  armor = "gold"
+  armor = "gold",
+  armor_enchantments = {{protection = 1}, {protection = 1}, {protection = 1}, {protection = 1}}
 })
 
 kitpvp.api.register_kit({
@@ -43,5 +45,6 @@ kitpvp.api.register_kit({
     item("mcl_potions:swiftness_2"),
   },
   default_items = true,
-  armor = "gold"
+  armor = "gold",
+  armor_enchantments = {{protection = 1}, {protection = 1}, {protection = 1}, {protection = 1}}
 })

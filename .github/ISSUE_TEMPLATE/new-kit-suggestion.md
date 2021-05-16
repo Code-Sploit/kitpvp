@@ -9,15 +9,15 @@ assignees: Code-Sploit
 
 # Kit name
 ...
-<br>
-# Armor type
-...
-<br>
+
+# Armor type & Enchantments
+type -> {enchantmentname = level} (Level does not have to be restricted to the normal max level)
+
 # Items & Enchantments
 item1 -> {enchantmentname = level} (Level does not have to be restricted to the normal max level)
-<br>
+
 # Has default items? (Includes 64 steak)
 Yes/No
-<br>
-# Why you want this kit to be added
+
+# Why do you want this kit to be added
 ...

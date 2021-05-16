@@ -3,7 +3,11 @@ HOW TO ADD KITS:
 
 kitpvp.api.register_kit({
   name = agreatkitname,
-  items = {itemstr1, itemstr2, itemstr3},
+  items = {
+  	item(itemstr1, {enchantment1 = value, enchantment2 = value}),
+	item(itemstr2, {enchantment1 = value, enchantment2 = value}),
+	item(itemstr3, {enchantment1 = value, enchantment2 = value})
+  },
   armor = leather/chain/iron/gold/diamond/netherite
 })
 

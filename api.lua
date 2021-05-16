@@ -33,7 +33,7 @@ function kitpvp.api.add_enchantments(itemstring, enchantments)
   return itemObj
 end
 
-function kitpvp.api.get_tool_obj(itemstring, enchantments)
+function kitpvp.api.get_item_obj(itemstring, enchantments)
   local obj = {}
 
   obj.itemstring = itemstring

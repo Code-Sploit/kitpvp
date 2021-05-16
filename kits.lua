@@ -8,7 +8,8 @@ kitpvp.api.register_kit({
 	item(itemstr2, {enchantment1 = value, enchantment2 = value}),
 	item(itemstr3, {enchantment1 = value, enchantment2 = value})
   },
-  armor = leather/chain/iron/gold/diamond/netherite
+  armor = leather/chain/iron/gold/diamond/netherite,
+  armor_enchantments = {{enchantmentsforhelmet = value}, {enchantmentsforchestplate = value}, {enchantmentsforleggings = value}, {enchantmentsforboots = value}}
 })
 
 ]]

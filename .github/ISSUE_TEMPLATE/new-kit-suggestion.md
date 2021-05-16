@@ -2,7 +2,7 @@
 name: New kit suggestion
 about: Make a suggestion for a new kit
 title: New Kit Suggestion
-labels: ''
+labels: enhancement, new kit
 assignees: Code-Sploit
 
 ---

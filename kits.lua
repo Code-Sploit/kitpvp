@@ -49,3 +49,13 @@ kitpvp.api.register_kit({
   armor = "gold",
   armor_enchantments = {{protection = 1}, {protection = 1}, {protection = 1}, {protection = 1}}
 })
+
+kitpvp.api.register_kit({
+  name = "blaze",
+  items = {
+    item("mcl_tools:sword_iron", {sharpness = 1, fire_aspect = 2})
+  },
+  default_items = true,
+  armor = "gold",
+  armor_enchantments = {{fire_protection = 5}, {fire_protection = 5}, {fire_protection = 5}, {fire_protection = 5}}
+})

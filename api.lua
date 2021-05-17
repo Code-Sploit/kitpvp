@@ -33,10 +33,11 @@ function kitpvp.api.add_enchantments(itemstring, enchantments)
   return itemObj
 end
 
-function kitpvp.api.get_item_obj(itemstring, enchantments)
+function kitpvp.api.get_item_obj(itemstring, count, enchantments)
   local obj = {}
 
   obj.itemstring = itemstring
+  obj.count = count
   obj.enchantments = enchantments
 
   return obj
@@ -123,6 +124,11 @@ function kitpvp.api.give_kit(player, kitname)
     local item = itemobj.itemstring
     local itemstack = ItemStack(item)
     local enchantments = itemobj.enchantments
+
+    local count = itemobj.count
+
+    if count == 0 then count = 1 end
+
     local final_item_obj
 
     if enchantments ~= nil then
@@ -131,6 +137,8 @@ function kitpvp.api.give_kit(player, kitname)
       final_item_obj = itemstack
     end
 
-    kitpvp.api.give_to_player(player, final_item_obj)
+    for i=1,count do
+      kitpvp.api.give_to_player(player, final_item_obj)
+    end
   end
 end

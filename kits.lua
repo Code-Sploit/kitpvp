@@ -59,3 +59,19 @@ kitpvp.api.register_kit({
   armor = "gold",
   armor_enchantments = {{fire_protection = 5}, {fire_protection = 5}, {fire_protection = 5}, {fire_protection = 5}}
 })
+
+kitpvp.api.register_kit({
+  name = "elytrian",
+  items = {
+    item("mcl_tools:sword_iron", 1, {sharpness = 1}),
+    item("mcl_armor:elytra", 1),
+    item("mcl_fireworks:rocket_3", 50),
+    item("mcl_core:apple_gold", 1),
+    item("mcl_farming:bread", 20),
+    item("mcl_bows:bow", 1),
+    item("mcl_bows:arrow", 20)
+  },
+  default_items = true,
+  armor = "leather",
+  armor_enchantments = {{protection = 1}, {protection = 1}, {protection = 1}, {protection = 1}}
+})

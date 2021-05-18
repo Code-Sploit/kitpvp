@@ -87,3 +87,17 @@ kitpvp.api.register_kit({
   armor = "iron",
   armor_enchantments = {{protection = 1}, {protection = 1}, {protection = 1}, {protection = 1}}
 })
+
+kitpvp.api.register_kit({
+  name = "blaster",
+  items = {
+    item("mcl_tnt:tnt", 4),
+    item("mesecons:redstone", 64),
+    item("mesecons_delayer:delayer_off_1", 64),
+    item("mesecons_button:button_stone_off", 4),
+    item("mesecons_pressureplates:pressure_plate_stone", 4),
+  },
+  default_items = true,
+  armor = "iron",
+  armor_enchantments = {{protection = 1}, {protection = 3}, {protection = 2}, {protection = 1}}
+})

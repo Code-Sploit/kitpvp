@@ -79,11 +79,11 @@ kitpvp.api.register_kit({
 kitpvp.api.register_kit({
   name = "spy",
   items = {
-    item("mcl_tools:sword_stone", {sharpness = 1}) --fighting
+    item("mcl_tools:sword_stone", 1, {sharpness = 1}) --fighting
     item("mcl_potions:invisibility", 2) --spying
     item("mcl_potions:night_vision", 2) --spying
     item("mcl_books:writable_book", 3) --keeping note of whats happening
-    item("mcl_tools:pick_iron", {efficiency = 1, unbreaking = 1}) --digging pesky blocks to keep spying
+    item("mcl_tools:pick_iron", 1, {efficiency = 1, unbreaking = 1}) --digging pesky blocks to keep spying
   },
   default_items = true,
   armor = "iron",

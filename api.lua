@@ -54,7 +54,8 @@ function kitpvp.api.register_kit(def)
   --local effects = def.effects
 
   -- Is $def completly filled in?
-  if not _def.name or not _def.items or not _def.armor or not _def.armor_enchantments or not _def.default_items then return end
+  if not _def.name or not _def.items or not _def.armor or not _def.armor_enchantments or
+    not _def.default_items then return end
 
   -- Register the kit
   kitpvp.kits[_def.name] = _def

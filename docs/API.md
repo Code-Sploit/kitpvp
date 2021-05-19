@@ -29,4 +29,5 @@ Replace:
 * `CHESTPLATE_ENCHANTMENT`
 * `LEGGINGS_ENCHANTMENT`
 * `BOOTS_ENCHANTMENT`
-<br>with their corresponding values.
+
+with their corresponding values.

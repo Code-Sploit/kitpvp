@@ -1,9 +1,7 @@
 # Kits
-
 <!--
 When you add a new kit, make sure to list it HERE.
 -->
-
 ## Kits
 * Tank
 * Archer

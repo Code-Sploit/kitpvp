@@ -8,6 +8,9 @@ kitpvp.api.register_kit({
 	item(itemstr2, count, {enchantment1 = value, enchantment2 = value}),
 	item(itemstr3, count, {enchantment1 = value, enchantment2 = value})
   },
+  effects = {
+    effect(effects.type, param1, param2),
+  },
   armor = leather/chain/iron/gold/diamond/netherite,
   armor_enchantments = {
 	{enchantmentsforhelmet = value},

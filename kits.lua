@@ -21,6 +21,9 @@ kitpvp.api.register_kit({
 -- To make the item converter function a bit shorter
 item = kitpvp.api.get_item_obj
 
+-- To make the effect converter function a bit shorter
+effect = kitpvp.api.get_effect_obj
+
 kitpvp.api.register_kit({
   name = "tank",
   items = {
@@ -48,6 +51,10 @@ kitpvp.api.register_kit({
   items = {
     item("mcl_tools:sword_stone", {sharpness = 1}),
     item("mcl_potions:swiftness_2"),
+  },
+  --This kit is used to test the new effect functionality.
+  effects = {
+    effect(effects[swiftness], 2, 100), --Double the speed for 100 minutes, ill change this later, just a test
   },
   default_items = true,
   armor = "gold",

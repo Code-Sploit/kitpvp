@@ -4,6 +4,7 @@ local modpath = minetest.get_modpath(modname)
 if modpath then modpath = modpath .. "/" end
 
 local launch = {
+  "effect.lua",
   "api.lua",
   "kits.lua",
   "commands.lua"

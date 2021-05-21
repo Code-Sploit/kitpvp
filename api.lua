@@ -43,18 +43,29 @@ function kitpvp.api.get_item_obj(itemstring, count, enchantments)
   return obj
 end
 
+function kitpvp.api.get_effect_obj(effect, param1, param2)
+  local obj = {}
+
+  obj.effect = effect
+  obj.param1 = param1
+  obj.param2 = param2
+
+  return obj
+end
+
 function kitpvp.api.register_kit(def)
   local _def = {}
 
   _def.name               = def.name
   _def.items              = def.items
+  _def.effects            = def.effects
   _def.armor              = def.armor
   _def.armor_enchantments = def.armor_enchantments
   _def.default_items      = def.default_items
-  --local effects = def.effects
+
 
   -- Is $def completly filled in?
-  if not _def.name or not _def.items or not _def.armor or not _def.armor_enchantments or
+  if not _def.name or not _def.items or not _def.effects or not _def.armor or not _def.armor_enchantments or
     not _def.default_items then return end
 
   -- Register the kit
@@ -140,6 +151,16 @@ function kitpvp.api.give_kit(player, kitname)
 
     for i=1,count do
       kitpvp.api.give_to_player(player, final_item_obj)
+    end
+  end
+  -- EFFECTS
+  for _, effectobj in pairs(def.effects) do
+    local effect = effectobj.effect
+    local param1 = effectobj.param1
+    local param2 = effectobj.param2
+
+    for i=1,count do
+      effect(player,param1,param2)
     end
   end
 end

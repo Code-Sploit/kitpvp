@@ -159,8 +159,6 @@ function kitpvp.api.give_kit(player, kitname)
     local param1 = effectobj.param1
     local param2 = effectobj.param2
 
-    for i=1,count do
-      effect(player,param1,param2)
-    end
+    effect(player,param1,param2)
   end
 end

@@ -65,8 +65,11 @@ function kitpvp.api.register_kit(def)
 
 
   -- Is $def completly filled in?
-  if not _def.name or not _def.items or not _def.effects or not _def.armor or not _def.armor_enchantments or
+  
+  -- Note that _def.effects is optional, I removed it to not annoy people some more
+  if not _def.name or not _def.items or not _def.armor or not _def.armor_enchantments or
     not _def.default_items then return end
+  
 
   -- Register the kit
   kitpvp.kits[_def.name] = _def
@@ -153,12 +156,16 @@ function kitpvp.api.give_kit(player, kitname)
       kitpvp.api.give_to_player(player, final_item_obj)
     end
   end
+  
   -- EFFECTS
-  for _, effectobj in pairs(def.effects) do
-    local effect = effectobj.effect
-    local param1 = effectobj.param1
-    local param2 = effectobj.param2
+  
+  if def.effects then
+    for _, effectobj in pairs(def.effects) do
+      local effect = effectobj.effect
+      local param1 = effectobj.param1
+      local param2 = effectobj.param2
 
-    effect(player,param1,param2)
+      effect(player,param1,param2)
+    end
   end
 end

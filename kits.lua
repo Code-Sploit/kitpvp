@@ -70,7 +70,7 @@ kitpvp.api.register_kit({
   },
   --This kit is used to test the new effect functionality.
   effects = {
-    effect(effects[swiftness], 2, 100), --Double the speed for 100 minutes, ill change this later, just a test
+    effect(effects.swiftness, 2, 100), --Double the speed for 100 minutes, ill change this later, just a test
   },
   default_items = true,
   armor = "gold",
